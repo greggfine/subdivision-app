@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
-import Question from "./Question";
-import Answers from "./Answers";
-import ScoreBoard from "./ScoreBoard";
+import Question from "./components/Question";
+import Answers from "./components/Answers";
+import ScoreBoard from "./components/ScoreBoard";
+import { Header } from "semantic-ui-react";
 
 function App() {
   return (
     <div className="App">
       <ScoreBoard />
+      <Header size="huge">Subdivision App</Header>
       <Question />
       <Answers />
     </div>
@@ -24,10 +26,6 @@ Choose the one that you are hearing.
 
 Features:
   tooltips
-  Score: 10 chances
-  Lives: 3
-  Points: 100 per correct guess
-
 
 Components:
 DATA Panel(holds score, lives, and points)
@@ -42,14 +40,7 @@ Data:
   }
 ]
 
-For now: Give me a random number
-Give me two choics of numbers
-If I pick the correct one, add a point, etc.
-
-create 2 btns, one having the correct answer and one having
-a different answer
-
-Which btn will hold the correct answer?
-
-
+HOW DO WE PLAY THIS AUDIO???
+We don't want to see the notation image.
+On "Get Random Question" an audio file is triggered
 */

@@ -5,17 +5,18 @@ import uuid from "uuid";
 import {
   handleCorrectAnswer,
   handleWrongAnswer
-} from "./actions/handleAnswers";
+} from "../actions/handleAnswers";
+import { Button } from "semantic-ui-react";
 
 const Answers = ({ questions, handleCorrectAnswer, handleWrongAnswer }) => {
   const generateBtns = () =>
     shuffle([
-      <button key={uuid()} onClick={handleCorrectAnswer}>
-        {questions["correctAnswer"]}
-      </button>,
-      <button key={uuid()} onClick={handleWrongAnswer}>
-        {questions["wrongAnswer"]}
-      </button>
+      <Button key={uuid()} onClick={handleCorrectAnswer}>
+        <img src={questions["correctAnswer"]} />
+      </Button>,
+      <Button key={uuid()} onClick={handleWrongAnswer}>
+        <img src={questions["wrongAnswer"]} />
+      </Button>
     ]);
   return (
     <div className="answers">
@@ -24,9 +25,10 @@ const Answers = ({ questions, handleCorrectAnswer, handleWrongAnswer }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  questions: state.questions
-});
+const mapStateToProps = state =>
+  console.log(state) || {
+    questions: state.questions
+  };
 
 export default connect(mapStateToProps, {
   handleCorrectAnswer,

@@ -1,9 +1,12 @@
 import { combineReducers } from "redux";
 import { questionReducer } from "./questionReducer";
-import { answersReducer } from "./answersReducer";
+import { livesReducer } from "./livesReducer";
+import { scoreReducer } from "./scoreReducer";
+import { chancesReducer } from "./chancesReducer";
 
 export const rootReducer = combineReducers({
-  name: "gregg",
   questions: questionReducer,
-  answer: answersReducer
+  lives: livesReducer,
+  score: scoreReducer,
+  chances: chancesReducer
 });

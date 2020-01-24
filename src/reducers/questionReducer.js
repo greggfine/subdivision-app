@@ -1,24 +1,24 @@
-const nums = [1, 2, 3, 4, 5];
+import { shuffle } from "lodash";
+import notation1 from "./notation/notation1.jpg";
+import notation2 from "./notation/notation2.jpg";
+// const nums = [1, 2, 3, 4, 5];
+const images = [notation1, notation2];
 
 export const randomNumObj = arr => {
-  const result = {};
-  let randNum = () => Math.ceil(Math.random() * arr.length);
-  result["correctAnswer"] = randNum();
-  let randNum2 = randNum();
-  while (result["correctAnswer"] === randNum2) {
-    randNum2 = randNum();
-  }
-  result["wrongAnswer"] = randNum2;
-  return result;
+  const shuffledArr = shuffle(arr);
+  return {
+    correctAnswer: shuffledArr[0],
+    wrongAnswer: shuffledArr[1]
+  };
 };
 
 export const questionReducer = (
-  state = { correctAnswer: "?", wrongAnswer: "?" },
+  state = { correctAnswer: notation1, wrongAnswer: notation2 },
   action
 ) => {
   switch (action.type) {
     case "GET RANDOM QUESTION":
-      return randomNumObj(nums);
+      return randomNumObj(images);
     default:
       return state;
   }
