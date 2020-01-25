@@ -4,6 +4,8 @@ export const chancesReducer = (state = 1, action) => {
       return state + 1;
     case "HANDLE WRONG ANSWER":
       return state + 1;
+    case "PLAY_AGAIN":
+      return 1;
     default:
       return state;
   }

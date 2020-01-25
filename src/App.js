@@ -4,9 +4,13 @@ import Question from "./components/Question";
 import Answers from "./components/Answers";
 import ScoreBoard from "./components/ScoreBoard";
 import { Header } from "semantic-ui-react";
+import GameOverDisplay from "./components/GameOverDisplay";
+import { connect } from "react-redux";
 
-function App() {
-  return (
+function App({ gameOver }) {
+  return gameOver ? (
+    <GameOverDisplay />
+  ) : (
     <div className="App">
       <ScoreBoard />
       <Header size="huge">Subdivision App</Header>
@@ -16,7 +20,13 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    gameOver: state.gameOver
+  };
+};
+
+export default connect(mapStateToProps)(App);
 
 /* Create a guessing game
 You hear a one beat rhythmic pattern.

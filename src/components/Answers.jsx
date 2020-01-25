@@ -25,10 +25,9 @@ const Answers = ({ questions, handleCorrectAnswer, handleWrongAnswer }) => {
   );
 };
 
-const mapStateToProps = state =>
-  console.log(state) || {
-    questions: state.questions
-  };
+const mapStateToProps = state => ({
+  questions: state.questions
+});
 
 export default connect(mapStateToProps, {
   handleCorrectAnswer,
