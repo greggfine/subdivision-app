@@ -1,0 +1,52 @@
+.answers .answer-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.answers button {
+  margin-right: 60px !important;
+  width: 400px;
+}
+
+.answers button:hover {
+  cursor: pointer;
+}
+
+.app {
+  text-align: center;
+}
+
+.lives {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.question {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.score {
+  margin-right: 20px;
+}
+
+.scoreboard {
+  height: 70px;
+  border-bottom: 1px solid #000;
+  background-color: #6d6565;
+  color: #fff;
+  line-height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bolder;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.7rem;
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EAGR,aAAa,EAAE,eAAe;EAE9B,gBAAgB,EAAE,eAAe;CAYlC;;AAjBD,AAQE,SARO,AAQN,MAAM,CAAC;EACN,gBAAgB,EAAE,OAAkB,CAAC,UAAU;CAChD;;AAVH,AAYE,SAZO,CAYP,IAAI,CAAC;EACH,SAAS,EAAE,eAAe;CAG3B",
+    "sources": [
+        "Answers.scss"
+    ],
+    "names": [],
+    "file": "Answers.css"
+}

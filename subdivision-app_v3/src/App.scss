@@ -1,0 +1,68 @@
+.answers {
+  .answer-btns {
+    display: flex;
+
+    // display: flex;
+    justify-content: center;
+  }
+  button {
+    margin-right: 60px !important;
+    width: 400px;
+    // font-size: 2rem;
+    // margin-top: 20px;
+    // margin-right: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.app {
+  text-align: center;
+  background-color: rgb(219, 185, 241);
+  height: 100vh;
+}
+
+.hear-loop-again-btn {
+  margin-bottom: 120px !important;
+}
+
+.identify-heading {
+  font-size: 3rem !important;
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
+}
+
+.lives {
+  margin-left: 20px;
+  margin-right: 120px;
+}
+
+.question {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.score {
+  margin-right: 120px;
+}
+
+.scoreboard {
+  line-height: 70px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem !important;
+  color: #fff;
+  box-shadow: 0px 1px 10px 3px rgb(128, 123, 123) !important;
+}
+
+.start-game-container {
+  text-align: center;
+  font-size: 3rem;
+
+  margin-top: 300px;
+
+  .header {
+    margin-bottom: 60px;
+  }
+}
