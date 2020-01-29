@@ -1,28 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { shuffle } from "lodash";
-import PropTypes from "prop-types";
 import uuid from "uuid";
 import {
   handleCorrectAnswer,
   handleWrongAnswer
-} from "../actions/handleAnswers";
-import { handlePlayNext } from "../actions/handlePlayNext";
-import { Button } from "semantic-ui-react";
+} from "../../action-creators/handleAnswers";
+import { handlePlayNext } from "../../action-creators/handlePlayNext";
 import Abcjs from "react-abc";
-import success from "../audio/sfx/success.mp3";
-import failure from "../audio/sfx/failure.mp3";
+
+import success from "../../audio/sfx/success.mp3";
+import failure from "../../audio/sfx/failure.mp3";
+
 import "./Answers.scss";
-
-const playSuccess = () => {
-  const success = document.getElementById("success");
-  success.play();
-};
-
-const playFailure = () => {
-  const failure = document.getElementById("failure");
-  failure.play();
-};
 
 const Answers = ({
   questions,
@@ -31,6 +22,8 @@ const Answers = ({
   handlePlayNext,
   playNext
 }) => {
+  const audioSuccessRef = useRef();
+  const audioFailureRef = useRef();
   const generateBtns = () =>
     shuffle([
       <button
@@ -38,7 +31,7 @@ const Answers = ({
         key={uuid()}
         onClick={() => {
           handleCorrectAnswer();
-          playSuccess();
+          audioSuccessRef.current.play();
           handlePlayNext();
         }}
       >
@@ -55,7 +48,7 @@ const Answers = ({
         key={uuid()}
         onClick={() => {
           handleWrongAnswer();
-          playFailure();
+          audioFailureRef.current.play();
           handlePlayNext();
         }}
       >
@@ -68,18 +61,15 @@ const Answers = ({
       </button>
     ]);
   return (
-    <div className="answers">
-      <audio src={success} id="success"></audio>
-      <audio src={failure} id="failure"></audio>
+    <div className="Answers">
+      <audio src={success} id="success" ref={audioSuccessRef}></audio>
+      <audio src={failure} id="failure" ref={audioFailureRef}></audio>
       <div className="answer-btns">{generateBtns()}</div>
     </div>
   );
 };
 
-const mapStateToProps = state => ({
-  questions: state.questions,
-  playNext: state.playNext
-});
+const mapStateToProps = ({ questions, playNext }) => ({ questions, playNext });
 
 export default connect(mapStateToProps, {
   handleCorrectAnswer,

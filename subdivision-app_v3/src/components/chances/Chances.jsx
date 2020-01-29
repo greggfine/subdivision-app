@@ -1,7 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setGameOver } from "../actions/setGameOver";
-import gameOver from "../audio/sfx/game_over.mp3";
+import { setGameOver } from "../../action-creators/setGameOver";
+
+import gameOver from "../../audio/sfx/game_over.mp3";
+
 import { Icon } from "semantic-ui-react";
 import PropTypes from "prop-types";
 
@@ -17,16 +19,16 @@ const Chances = ({ chances, setGameOver }) => {
       setGameOver();
     }, 5000);
     return (
-      <div className="chances">
+      <>
         <audio src={gameOver} id="gameOver"></audio>
         CHANCES: {chances}/10
-      </div>
+      </>
     );
   } else {
     return (
-      <div className="chances">
+      <>
         <Icon name="shield alternate" size="small" /> {chances}/10
-      </div>
+      </>
     );
   }
 };

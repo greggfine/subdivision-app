@@ -1,12 +1,12 @@
 import React from "react";
-import "./App.css";
-import Question from "./components/Question";
-import Answers from "./components/Answers";
-import ScoreBoard from "./components/ScoreBoard";
-import { Container, Header } from "semantic-ui-react";
-import GameOverDisplay from "./components/GameOverDisplay";
-import StartGameDisplay from "./components/StartGameDisplay";
 import { connect } from "react-redux";
+import Question from "./components/question/Question";
+import Answers from "./components/answers/Answers";
+import ScoreBoard from "./components/scoreboard/ScoreBoard";
+import GameOverDisplay from "./components/gameOverDisplay/GameOverDisplay";
+import StartGameDisplay from "./components/startGameDisplay/StartGameDisplay";
+
+import "./App.css";
 
 function App({ gameOver, startGame }) {
   return gameOver ? (
@@ -14,20 +14,14 @@ function App({ gameOver, startGame }) {
   ) : startGame === false ? (
     <StartGameDisplay />
   ) : (
-    <div className="app">
+    <div className="App">
       <ScoreBoard />
-      {/* <Header size="huge">Subdivision App</Header> */}
       <Question />
       <Answers />
     </div>
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    gameOver: state.gameOver,
-    startGame: state.startGame
-  };
-};
+const mapStateToProps = ({ gameOver, startGame }) => ({ gameOver, startGame });
 
 export default connect(mapStateToProps)(App);

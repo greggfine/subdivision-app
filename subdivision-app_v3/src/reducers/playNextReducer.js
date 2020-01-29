@@ -1,3 +1,4 @@
+import { PLAY_NEXT } from "../actions";
 import { shuffle } from "lodash";
 import startStopTimes from "../startStopData";
 
@@ -13,7 +14,7 @@ export const playNextReducer = (
   action
 ) => {
   switch (action.type) {
-    case "PLAY_NEXT":
+    case PLAY_NEXT:
       count++;
       randCount = Math.floor(Math.random() * shuffledStartStopTimes.length);
       while (randCount === count) {

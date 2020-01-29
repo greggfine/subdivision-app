@@ -1,3 +1,17 @@
+.Answers {
+  .answer-btns {
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    margin-right: 60px !important;
+    width: 400px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 .notation {
   //   animation-name: fadeIn;
   //   animation-duration: 3s;

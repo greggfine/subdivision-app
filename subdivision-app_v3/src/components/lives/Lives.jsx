@@ -1,10 +1,13 @@
 import React from "react";
-import { connect } from "react-redux";
-import { setGameOver } from "../actions/setGameOver";
-import gameOver from "../audio/sfx/game_over.mp3";
-import { Icon } from "semantic-ui-react";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { setGameOver } from "../../action-creators/setGameOver";
 import uuid from "uuid";
+
+import gameOver from "../../audio/sfx/game_over.mp3";
+
+import { Icon } from "semantic-ui-react";
+import "./lives.scss";
 
 const playGameOver = () => {
   const gameOver = document.getElementById("gameOver");
@@ -12,33 +15,31 @@ const playGameOver = () => {
 };
 
 const Lives = ({ lives, setGameOver }) => {
-  const createLivesIcons = () => {
-    const icons = [];
-    while (icons.length < lives) {
-      icons.push(<Icon key={uuid()} name="user circle" size="small" />);
+  const createLivesIcons = (totalLives, arr = []) => {
+    if (arr.length === totalLives) {
+      return arr;
     }
-    return icons;
+    arr.push(<Icon key={uuid()} name="user circle" size="small" />);
+    return createLivesIcons(lives, arr);
   };
+
   if (lives === 0) {
     window.setTimeout(() => {
       playGameOver();
       setGameOver();
     }, 5000);
     return (
-      <div className="lives">
+      <div className="Lives">
         <audio src={gameOver} id="gameOver"></audio>
         LIVES : {lives}
       </div>
     );
   } else {
-    return <div className="lives">{createLivesIcons()}</div>;
+    return <div className="Lives">{createLivesIcons()}</div>;
   }
 };
-const mapStateToProps = state => {
-  return {
-    lives: state.lives
-  };
-};
+const mapStateToProps = ({ lives }) => ({ lives });
+
 export default connect(mapStateToProps, { setGameOver })(Lives);
 
 Lives.propTypes = {

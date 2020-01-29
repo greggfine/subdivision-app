@@ -1,0 +1,31 @@
+.Answers .answer-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Answers button {
+  margin-right: 60px !important;
+  width: 400px;
+}
+
+.Answers button:hover {
+  cursor: pointer;
+}
+
+.notation {
+  border-radius: 10px !important;
+  background-color: #fff !important;
+}
+
+.notation:hover {
+  background-color: #e2dff1 !important;
+}
+
+.notation .abc {
+  font-size: 4rem !important;
+}
+/*# sourceMappingURL=Answers.css.map */
