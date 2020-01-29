@@ -16,7 +16,7 @@ import failure from "../../audio/sfx/failure.mp3";
 import "./Answers.scss";
 
 const Answers = ({
-  questions,
+  lives,
   handleCorrectAnswer,
   handleWrongAnswer,
   handlePlayNext,
@@ -64,12 +64,21 @@ const Answers = ({
     <div className="Answers">
       <audio src={success} id="success" ref={audioSuccessRef}></audio>
       <audio src={failure} id="failure" ref={audioFailureRef}></audio>
-      <div className="answer-btns">{generateBtns()}</div>
+      <div
+        className="answer-btns"
+        style={{ display: lives > 0 ? "block" : "none" }}
+      >
+        {generateBtns()}
+      </div>
     </div>
   );
 };
 
-const mapStateToProps = ({ questions, playNext }) => ({ questions, playNext });
+const mapStateToProps = ({ lives, questions, playNext }) => ({
+  lives,
+  questions,
+  playNext
+});
 
 export default connect(mapStateToProps, {
   handleCorrectAnswer,

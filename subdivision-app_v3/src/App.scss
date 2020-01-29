@@ -1,5 +1,25 @@
 .App {
   text-align: center;
-  background-color: rgb(219, 185, 241);
+  //   background-color: rgb(219, 185, 241);
   height: 100vh;
+  //   background-image: url("./images/pexels/black-and-white-festival-music-musician-92080.jpg");
+  //   background-image: url("./images/pexels/silhouette-photo-of-man-singing-on-stage-1916824.jpg");
+  //   background-image: url("./images/pexels/black-and-white-music-guitar-acoustic-guitar-41498.jpg");
+  //   background-size: 3800px;
+  background-size: 2000px;
+  background-repeat: no-repeat;
+  //   background-position: 20% 35%;
+  background-position: 10% 35%;
+  //   background-blend-mode: screen;
+  // background-blend-mode: color-dodge;
+  background-blend-mode: soft-light;
+
+  .question-answers-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    // background-color: #dedede;
+    padding: 20px;
+  }
 }

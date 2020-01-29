@@ -3,6 +3,14 @@
   margin-bottom: 60px;
 }
 
+.Question .hear-again-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #dcd;
+}
+
 .Question .hear-loop-again-btn {
   margin-bottom: 120px !important;
 }
@@ -11,5 +19,9 @@
   font-size: 3rem !important;
   margin-top: 60px !important;
   margin-bottom: 60px !important;
+}
+
+.Question .play-again {
+  color: green;
 }
 /*# sourceMappingURL=question.css.map */

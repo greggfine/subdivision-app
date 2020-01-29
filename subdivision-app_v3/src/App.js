@@ -16,8 +16,10 @@ function App({ gameOver, startGame }) {
   ) : (
     <div className="App">
       <ScoreBoard />
-      <Question />
-      <Answers />
+      <div className="question-answers-wrapper">
+        <Question />
+        <Answers />
+      </div>
     </div>
   );
 }

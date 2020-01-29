@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { setGameOver } from "../../action-creators/setGameOver";
@@ -9,12 +9,12 @@ import gameOver from "../../audio/sfx/game_over.mp3";
 import { Icon } from "semantic-ui-react";
 import "./lives.scss";
 
-const playGameOver = () => {
-  const gameOver = document.getElementById("gameOver");
-  gameOver.play();
-};
-
 const Lives = ({ lives, setGameOver }) => {
+  const audioRef = useRef();
+  const playGameOver = () => {
+    audioRef.current.play();
+    console.log(audioRef);
+  };
   const createLivesIcons = (totalLives, arr = []) => {
     if (arr.length === totalLives) {
       return arr;
@@ -25,17 +25,23 @@ const Lives = ({ lives, setGameOver }) => {
 
   if (lives === 0) {
     window.setTimeout(() => {
-      playGameOver();
       setGameOver();
     }, 5000);
     return (
       <div className="Lives">
-        <audio src={gameOver} id="gameOver"></audio>
+        {playGameOver()}
+        <audio src={gameOver} id="gameOver" ref={audioRef}></audio>
         LIVES : {lives}
       </div>
     );
   } else {
-    return <div className="Lives">{createLivesIcons()}</div>;
+    return (
+      <div className="Lives">
+        {" "}
+        <audio src={gameOver} id="gameOver" ref={audioRef}></audio>
+        {createLivesIcons()}
+      </div>
+    );
   }
 };
 const mapStateToProps = ({ lives }) => ({ lives });
