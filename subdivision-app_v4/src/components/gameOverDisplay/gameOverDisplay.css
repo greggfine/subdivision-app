@@ -1,0 +1,10 @@
+.Game-over {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 300px;
+}
+
+.Game-over .header {
+  margin-bottom: 60px;
+}
+/*# sourceMappingURL=gameOverDisplay.css.map */

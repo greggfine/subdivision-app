@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  background-size: 2000px;
+  background-repeat: no-repeat;
+  background-position: 10% 35%;
+  background-blend-mode: soft-light;
+}
+
+.App .question-answers-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+}
+/*# sourceMappingURL=App.css.map */

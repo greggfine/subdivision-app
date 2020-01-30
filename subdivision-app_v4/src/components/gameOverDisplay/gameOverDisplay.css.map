@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,KAAK;CAKlB;;AARD,AAKE,UALQ,CAKR,OAAO,CAAC;EACN,aAAa,EAAE,IAAI;CACpB",
+    "sources": [
+        "gameOverDisplay.scss"
+    ],
+    "names": [],
+    "file": "gameOverDisplay.css"
+}

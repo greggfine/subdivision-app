@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,WAAW,EAAE,gBAAgB;CAC9B",
+    "sources": [
+        "tip.scss"
+    ],
+    "names": [],
+    "file": "tip.css"
+}
