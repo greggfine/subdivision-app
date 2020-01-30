@@ -1,6 +1,6 @@
 import { PLAY_NEXT } from "../actions";
 import { shuffle } from "lodash";
-import startStopTimes from "../startStopData";
+import startStopTimes from "../util/startStopData";
 
 const shuffledStartStopTimes = shuffle(startStopTimes);
 

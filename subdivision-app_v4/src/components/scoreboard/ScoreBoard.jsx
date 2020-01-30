@@ -3,19 +3,23 @@ import Lives from "../lives/Lives";
 import Score from "../score/Score";
 import Chances from "../chances/Chances";
 import Tip from "../tip/Tip";
+import { connect } from "react-redux";
 
 import { Menu } from "semantic-ui-react";
 import "./scoreboard.scss";
 
-const ScoreBoard = () => {
+const ScoreBoard = ({ level }) => {
   return (
     <Menu className="Scoreboard" color="purple" inverted size="huge">
       <Lives />
       <Score />
       <Chances />
       <Tip />
+      <h5>{level.mode} mode</h5>
     </Menu>
   );
 };
 
-export default ScoreBoard;
+const mapStateToProps = ({ level }) => ({ level });
+
+export default connect(mapStateToProps)(ScoreBoard);

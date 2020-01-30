@@ -11,8 +11,7 @@ import "./App.css";
 function App({ gameOver, startGame }) {
   return gameOver ? (
     <GameOverDisplay />
-  ) : //   ) : startGame === false ? (
-  startGame === true ? (
+  ) : startGame === false ? (
     <StartGameDisplay />
   ) : (
     <div className="App">

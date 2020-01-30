@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { startGame } from "../../action-creators/startGame";
+import Levels from "../levels/Levels";
 
 import img from "../../images/pexels/silhouette-photo-of-man-singing-on-stage-1916824.jpg";
 
@@ -15,7 +16,7 @@ const StartGameDisplay = ({ startGame }) => (
     <Button onClick={startGame} inverted color="purple" size="huge">
       START GAME!
     </Button>
-    {/* <video src="https://www.youtube.com/watch?v=InMKcezbtA0"></video> */}
+    <Levels />
     <Embed
       id="InMKcezbtA0"
       placeholder={img}

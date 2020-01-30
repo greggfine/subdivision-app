@@ -1,29 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Header, Image, Modal } from "semantic-ui-react";
-
+import { getRandomTip } from "../../util/helpers";
+import { useToggle } from "../../hooks/toggleHook";
 import "./tip.scss";
 
 import gtrImg from "../../images/pexels/black-and-white-music-guitar-acoustic-guitar-41498.jpg";
 
 const Tip = ({ dimmer }) => {
-  const [openModal, toggleOpenModal] = useState(false);
+  const [openModal, toggleOpenModal] = useToggle();
 
-  const handleToggleOpen = () => {
-    toggleOpenModal(!openModal);
-  };
   return (
     <div>
-      <Button className="get-a-tip-btn" onClick={handleToggleOpen}>
+      <Button className="get-a-tip-btn" onClick={toggleOpenModal}>
         GET A TIP!
       </Button>
-      <Modal dimmer={dimmer} open={openModal} onClose={handleToggleOpen}>
+      <Modal dimmer={dimmer} open={openModal} onClose={toggleOpenModal}>
         <Modal.Header>Subdivision Tip...</Modal.Header>
         <Modal.Content image>
           <Image wrapped size="medium" src={gtrImg} />
           <Modal.Description>
-            <Header>Tip #1</Header>
-            <p>Try to tap your foot on the 1/4 note pulses.</p>
-            <p>With your other hand, evenly divide the pulse into 1/8 notes</p>
+            <Header>Gregg's Tip</Header>
+            <p>{getRandomTip()}</p>
           </Modal.Description>
         </Modal.Content>
         <Modal.Actions>
@@ -32,7 +29,7 @@ const Tip = ({ dimmer }) => {
             icon="checkmark"
             labelPosition="right"
             content="Got it!"
-            onClick={handleToggleOpen}
+            onClick={toggleOpenModal}
           />
         </Modal.Actions>
       </Modal>

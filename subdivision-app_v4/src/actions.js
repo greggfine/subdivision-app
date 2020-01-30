@@ -5,3 +5,4 @@ export const PLAY_NEXT = "PLAY_NEXT";
 export const GAME_OVER = "GAME_OVER";
 export const PLAY_AGAIN = "PLAY_AGAIN";
 export const START_GAME = "START_GAME";
+export const SET_MODE = "SET_MODE";

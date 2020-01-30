@@ -13,7 +13,6 @@ const Lives = ({ lives, setGameOver }) => {
   const audioRef = useRef();
   const playGameOver = () => {
     audioRef.current.play();
-    console.log(audioRef);
   };
   const createLivesIcons = (totalLives, arr = []) => {
     if (arr.length === totalLives) {

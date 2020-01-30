@@ -6,6 +6,7 @@ import { chancesReducer } from "./chancesReducer";
 import { gameOverReducer } from "./gameOverReducer";
 import { startGameReducer } from "./startGameReducer";
 import { playNextReducer } from "./playNextReducer";
+import { modeReducer } from "./modeReducer";
 
 export const rootReducer = combineReducers({
   questions: questionReducer,
@@ -14,5 +15,6 @@ export const rootReducer = combineReducers({
   chances: chancesReducer,
   gameOver: gameOverReducer,
   startGame: startGameReducer,
-  playNext: playNextReducer
+  playNext: playNextReducer,
+  level: modeReducer
 });
