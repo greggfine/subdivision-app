@@ -4,6 +4,7 @@ import Score from "../score/Score";
 import Chances from "../chances/Chances";
 import Tip from "../tip/Tip";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 import { Menu } from "semantic-ui-react";
 import "./scoreboard.scss";
@@ -23,3 +24,7 @@ const ScoreBoard = ({ level }) => {
 const mapStateToProps = ({ level }) => ({ level });
 
 export default connect(mapStateToProps)(ScoreBoard);
+
+ScoreBoard.propTypes = {
+  level: PropTypes.object
+};

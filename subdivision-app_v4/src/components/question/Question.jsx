@@ -3,16 +3,14 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getRandQuestion } from "../../action-creators/getRandQuestionAction";
 import { useToggle } from "../../hooks/toggleHook";
+import HearAgain from "../hearAgain/HearAgain";
+import MuteBtn from "../muteBtn/MuteBtn";
 
-// import loop3 from "../../audio/loops/loop3.mp3";
-// import loop7 from "../../audio/loops/loop7.mp3";
-
-import { Button, Header, Label, Icon } from "semantic-ui-react";
+import { Header } from "semantic-ui-react";
 import "./question.scss";
 
 const Question = ({ lives, level, playNext }) => {
   const [disabled, toggleDisabled] = useState(false);
-  //   const [currLoop, setCurrLoop] = useState(loop3);
   const [muted, toggleMuted] = useToggle();
   let [numRepeats, setNumRepeats] = useState(0);
 
@@ -51,31 +49,12 @@ const Question = ({ lives, level, playNext }) => {
         muted={muted}
         preload="auto"
       ></audio>
-      <div className="hear-again-wrapper">
-        <Icon
-          name="play"
-          onClick={hearLoopAgain}
-          size="huge"
-          disabled={disabled}
-          className="play-again"
-          style={{ cursor: disabled ? "not-allowed" : "pointer" }}
-        />
-        <span> Hear Again?</span>
-
-        <Label circular>{numRepeats}/2</Label>
-      </div>
-      <Button onClick={toggleMuted}>
-        {muted ? (
-          <Icon name="deaf" size="big"></Icon>
-        ) : (
-          <Icon name="sound" size="big"></Icon>
-          //   <Icon
-          //     name="assistive listening systems"
-          //     onClick={handleToggleMute}
-          //     size="big"
-          //   ></Icon>
-        )}
-      </Button>
+      <HearAgain
+        numRepeats={numRepeats}
+        disabled={disabled}
+        hearLoopAgain={hearLoopAgain}
+      />
+      <MuteBtn muted={muted} toggleMuted={toggleMuted} />
     </div>
   );
 };
@@ -89,5 +68,7 @@ const mapStateToProps = ({ level, lives, playNext }) => ({
 export default connect(mapStateToProps, { getRandQuestion })(Question);
 
 Question.propTypes = {
-  playNext: PropTypes.object
+  playNext: PropTypes.object.isRequired,
+  lives: PropTypes.number.isRequired,
+  level: PropTypes.object.isRequired
 };

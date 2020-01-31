@@ -38,7 +38,8 @@ const Tip = ({ dimmer }) => {
 };
 
 Tip.defaultProps = {
-  dimmer: "blurring"
+  //   dimmer: "blurring"
+  dimmer: "inverted"
 };
 
 export default Tip;

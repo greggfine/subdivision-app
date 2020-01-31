@@ -24,14 +24,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app",
-    "plugins": [
-      "react-hooks"
-    ],
-    "rules": {
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn"
-    }
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -46,6 +39,6 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react-hooks": "^2.3.0"
+    "@types/jest": "^25.1.1"
   }
 }

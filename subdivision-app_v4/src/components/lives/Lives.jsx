@@ -18,6 +18,7 @@ const Lives = ({ lives, setGameOver }) => {
     if (arr.length === totalLives) {
       return arr;
     }
+    // arr.push(<Icon key={uuid()} name="user circle" size="small" />);
     arr.push(<Icon key={uuid()} name="user circle" size="small" />);
     return createLivesIcons(lives, arr);
   };
