@@ -1,0 +1,38 @@
+.get-a-tip-btn {
+  font-size: 1.2rem !important;
+  box-shadow: 0 0 0px 0px #fff !important;
+  background: url("../../images/all-free-download.com/background_tree_wood_boards_texture_wooden_background_old_brown-1370489.jpg")
+    no-repeat top left !important;
+  background-size: 100% !important;
+  transition: box-shadow 80ms ease-in-out !important;
+  //   padding: 60px !important;
+  //   border-radius: 30% !important;
+  //   clip-path: ellipse(84px 200px at 44% 210%) !important;
+  //   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%) !important;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%) !important;
+  &:hover {
+    cursor: default !important;
+  }
+  .tip-txt {
+    vertical-align: middle;
+    padding-right: 20px;
+    flex-basis: 90%;
+  }
+}
+
+.lightbulb-icon {
+  cursor: pointer;
+  &:hover {
+    color: rgb(255, 123, 0) !important;
+    box-shadow: 0 0 30px 20px #fff,
+      /* inner white */ 0 0 80px 25px rgb(255, 161, 72),
+      /* middle magenta */ 0 0 120px 25px rgb(255, 240, 155) /* outer cyan */ !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .get-a-tip-btn {
+    font-size: 1.1rem !important;
+    margin-left: 60px !important;
+  }
+}

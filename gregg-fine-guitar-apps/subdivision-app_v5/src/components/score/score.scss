@@ -1,0 +1,25 @@
+.Score {
+  .Score-icon {
+    color: #fffaa4;
+    padding-right: 50px;
+    font-size: 2.3rem !important;
+  }
+
+  .Score-txt {
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Score {
+    .Score-icon {
+      font-size: 2rem !important;
+      padding-right: 40px;
+    }
+
+    .Score-txt {
+      font-size: 2rem;
+    }
+  }
+}

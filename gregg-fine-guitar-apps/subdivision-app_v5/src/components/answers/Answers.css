@@ -1,0 +1,93 @@
+.Answers {
+  margin-bottom: 60px;
+}
+
+.Answers .answer-btns {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+
+.Answers .btn {
+  border-radius: 10px !important;
+  background-color: #fff !important;
+  width: 500px !important;
+  outline: none !important;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  border: 3px solid #45334c91;
+}
+
+.Answers .btn:hover {
+  cursor: pointer;
+}
+
+.Answers .btn-notation:hover {
+  background-color: #e2dff1 !important;
+}
+
+.Answers .btn-notation-clicked {
+  pointer-events: none !important;
+}
+
+.Answers .btn-notation-clicked:hover {
+  cursor: not-allowed;
+  background-color: none !important;
+}
+
+.Answers .mode {
+  text-align: left;
+  margin-bottom: 100px;
+  opacity: 0.85;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 1200px) {
+  .Answers .answer-btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Answers .btn-notation {
+    width: 450px !important;
+  }
+  .Answers button:first-child {
+    margin-bottom: 60px;
+  }
+  .Answers .mode {
+    font-size: 1.6rem;
+    margin-bottom: 60px;
+    padding-left: 45px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Answers .answer-btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Answers .btn {
+    width: 300px !important;
+  }
+  .Answers button:first-child {
+    margin-bottom: 60px;
+  }
+  .Answers .mode {
+    font-size: 1.6rem;
+    margin-bottom: 60px;
+    padding-left: 45px;
+  }
+}
+/*# sourceMappingURL=Answers.css.map */

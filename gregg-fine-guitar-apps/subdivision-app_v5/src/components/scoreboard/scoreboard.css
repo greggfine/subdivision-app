@@ -1,0 +1,37 @@
+.Scoreboard {
+  font-size: 2.5rem !important;
+  color: #fff;
+  -webkit-box-shadow: 0px 1px 10px 3px #807b7b !important;
+          box-shadow: 0px 1px 10px 3px #807b7b !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: linear-gradient(354deg, #501179 0%, #67188b 18%, #8e24aa 40%, #a233bf 100%) !important;
+  border-radius: 0 !important;
+  margin-bottom: 40px !important;
+}
+
+.Scoreboard .lives-score-chances-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: 960px;
+}
+
+@media screen and (max-width: 1200px) {
+  .Scoreboard .lives-score-chances-wrapper {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+/*# sourceMappingURL=scoreboard.css.map */

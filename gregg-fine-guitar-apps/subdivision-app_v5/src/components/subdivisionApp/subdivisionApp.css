@@ -1,0 +1,32 @@
+.gtr-image {
+  background-image: url("../../images/pixabay/guitar-4510136_1920_resized.png");
+  background-repeat: no-repeat;
+  background-position: 460px 0px;
+  margin: 0 auto;
+  height: 400px;
+  background-size: contain;
+}
+
+.app-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .gtr-image {
+    background-position: 350px 20px;
+    margin: 0 auto;
+    height: 400px;
+    background-size: 300px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .gtr-image {
+    background-position: 150px 60px;
+    margin: 0 auto;
+    height: 400px;
+    background-size: 200px;
+  }
+}
+/*# sourceMappingURL=subdivisionApp.css.map */

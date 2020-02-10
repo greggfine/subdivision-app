@@ -1,0 +1,42 @@
+.get-a-tip-btn {
+  font-size: 1.2rem !important;
+  -webkit-box-shadow: 0 0 0px 0px #fff !important;
+          box-shadow: 0 0 0px 0px #fff !important;
+  background: url("../../images/all-free-download.com/background_tree_wood_boards_texture_wooden_background_old_brown-1370489.jpg") no-repeat top left !important;
+  background-size: 100% !important;
+  -webkit-transition: -webkit-box-shadow 80ms ease-in-out !important;
+  transition: -webkit-box-shadow 80ms ease-in-out !important;
+  transition: box-shadow 80ms ease-in-out !important;
+  transition: box-shadow 80ms ease-in-out, -webkit-box-shadow 80ms ease-in-out !important;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%) !important;
+          clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%) !important;
+}
+
+.get-a-tip-btn:hover {
+  cursor: default !important;
+}
+
+.get-a-tip-btn .tip-txt {
+  vertical-align: middle;
+  padding-right: 20px;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+}
+
+.lightbulb-icon {
+  cursor: pointer;
+}
+
+.lightbulb-icon:hover {
+  color: #ff7b00 !important;
+  -webkit-box-shadow: 0 0 30px 20px #fff, 0 0 80px 25px #ffa148, 0 0 120px 25px #fff09b !important;
+          box-shadow: 0 0 30px 20px #fff, 0 0 80px 25px #ffa148, 0 0 120px 25px #fff09b !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .get-a-tip-btn {
+    font-size: 1.1rem !important;
+    margin-left: 60px !important;
+  }
+}
+/*# sourceMappingURL=tip.css.map */
