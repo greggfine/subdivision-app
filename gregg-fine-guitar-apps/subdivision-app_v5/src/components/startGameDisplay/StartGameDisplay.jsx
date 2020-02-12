@@ -24,13 +24,13 @@ export const StartGameDisplay = ({ startGame }) => (
       START GAME!
     </Button>
     <Levels />
-    {/* <Embed
+    <Embed
       className="video"
       id="InMKcezbtA0"
       placeholder={img}
       source="youtube"
       autoPlay={true}
-    /> */}
+    />
   </Container>
 );
 

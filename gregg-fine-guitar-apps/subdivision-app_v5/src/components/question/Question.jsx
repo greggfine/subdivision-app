@@ -7,45 +7,48 @@ import HearAgain from "../hearAgain/HearAgain";
 import "./question.scss";
 
 const Question = ({ lives, level, muted, playNext, setPlayState }) => {
-  const [disabled, toggleDisabled] = useState(false);
-  let [numRepeats, setNumRepeats] = useState(0);
+  const [hearAgainBtnDisabled, toggleHearAgainBtnDisabled] = useState(false);
+  let [hearAgainNumRepeats, setHearAgainNumRepeats] = useState(0);
 
   const audioRef = useRef();
   useEffect(() => {
+    setPlayState(true);
     if (lives > 0) {
-      toggleDisabled(true);
+      toggleHearAgainBtnDisabled(true);
       window.setTimeout(() => {
-        setNumRepeats(0);
+        setHearAgainNumRepeats(0);
         audioRef.current.play();
-        setPlayState(true);
       }, 1000);
     }
   }, [playNext]);
 
   const hearLoopAgain = () => {
-    setNumRepeats((numRepeats += 1));
-    toggleDisabled(!disabled);
+    setHearAgainNumRepeats((hearAgainNumRepeats += 1));
+    toggleHearAgainBtnDisabled(!hearAgainBtnDisabled);
     audioRef.current.src = `${level.loop}#t=00:00:${playNext.startStopTimes.start},00:00:${playNext.startStopTimes.stop}`;
     audioRef.current.play();
   };
 
   const handleToggleDisabled = () => {
-    if (numRepeats < 2) {
-      toggleDisabled(false);
+    if (hearAgainNumRepeats < 2) {
+      toggleHearAgainBtnDisabled(false);
     }
   };
 
   return (
     <>
       <HearAgain
-        numRepeats={numRepeats}
-        disabled={disabled}
+        numRepeats={hearAgainNumRepeats}
+        disabled={hearAgainBtnDisabled}
         hearLoopAgain={hearLoopAgain}
       />
       <div className="Question">
         <audio
           src={`${level.loop}#t=00:00:${playNext.startStopTimes.start},00:00:${playNext.startStopTimes.stop}`}
           type="audio/mp3"
+          onPlay={() => {
+            setPlayState(true);
+          }}
           onPause={() => {
             handleToggleDisabled();
             setPlayState(false);

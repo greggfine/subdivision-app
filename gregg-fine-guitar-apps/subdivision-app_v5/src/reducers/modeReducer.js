@@ -22,9 +22,3 @@ export const modeReducer = (state = { mode: "Easy", loop: loop3 }, action) => {
       return state;
   }
 };
-
-/* 
-The state is an object with a mode and a loop
-it takes and action of type "SET_MODE"
-Default just returns state
-*/

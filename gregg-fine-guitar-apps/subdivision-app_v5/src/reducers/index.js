@@ -18,5 +18,5 @@ export const rootReducer = combineReducers({
   startGame: startGameReducer,
   playNext: playNextReducer,
   level: modeReducer,
-  playState: playStateReducer
+  isPlaying: playStateReducer
 });

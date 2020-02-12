@@ -6,20 +6,14 @@
     justify-content: space-between !important;
   }
 
-  .btn {
+  .answer-btns > button {
+    border: 3px solid #45334c91;
     border-radius: 10px !important;
-    background-color: #fff !important;
-    width: 500px !important;
     outline: none !important;
     flex-basis: 40%;
-    border: 3px solid #45334c91;
-    &:hover {
-      cursor: pointer;
-    }
-  }
 
-  .btn-notation {
     &:hover {
+      cursor: pointer !important;
       background-color: rgb(226, 223, 241) !important;
     }
   }
@@ -32,7 +26,7 @@
     }
   }
 
-  .mode {
+  .level-mode {
     text-align: left;
     margin-bottom: 100px;
     opacity: 0.85;
@@ -52,7 +46,7 @@
     button:first-child {
       margin-bottom: 60px;
     }
-    .mode {
+    .level-mode {
       font-size: 1.6rem;
       margin-bottom: 60px;
       padding-left: 45px;
@@ -72,7 +66,7 @@
     button:first-child {
       margin-bottom: 60px;
     }
-    .mode {
+    .level-mode {
       font-size: 1.6rem;
       margin-bottom: 60px;
       padding-left: 45px;
