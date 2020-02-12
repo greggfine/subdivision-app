@@ -1,0 +1,130 @@
+.Answers {
+  margin-bottom: 60px;
+}
+
+.Answers .answer-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+
+.Answers .answer-btns > button {
+  border: 3px solid #45334c91;
+  border-radius: 10px !important;
+  outline: none !important;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 750ms;
+          animation-duration: 750ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.Answers .answer-btns > button:hover {
+  cursor: pointer !important;
+  background-color: #e2dff1 !important;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Answers .btn-notation-clicked {
+  pointer-events: none !important;
+}
+
+.Answers .btn-notation-clicked:hover {
+  cursor: not-allowed;
+  background-color: none !important;
+}
+
+.Answers .Game-over-header {
+  margin-bottom: 120px !important;
+  font-size: 6.5rem !important;
+  color: rgba(47, 47, 47, 0.9);
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.63, -0.03, 0.21, 1.16);
+          animation-timing-function: cubic-bezier(0.63, -0.03, 0.21, 1.16);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    opacity: 0.3;
+    -webkit-transform: rotateY(0deg) scale(0);
+            transform: rotateY(0deg) scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateY(360deg) scale(1);
+            transform: rotateY(360deg) scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 0.3;
+    -webkit-transform: rotateY(0deg) scale(0);
+            transform: rotateY(0deg) scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateY(360deg) scale(1);
+            transform: rotateY(360deg) scale(1);
+  }
+}
+
+.Answers .level-mode {
+  text-align: left;
+  margin-bottom: 100px;
+  opacity: 0.85;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 1200px) {
+  .Answers .answer-btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Answers button:first-child {
+    margin-bottom: 60px;
+  }
+  .Answers .Game-over-header {
+    margin-bottom: 120px !important;
+    font-size: 4.5rem !important;
+  }
+  .Answers .level-mode {
+    font-size: 1.6rem;
+    margin-bottom: 60px;
+    padding-left: 45px;
+  }
+}
+/*# sourceMappingURL=Answers.css.map */

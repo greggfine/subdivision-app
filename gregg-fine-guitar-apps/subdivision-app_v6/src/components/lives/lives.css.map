@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,MAAM;CAKlB;;AAPD,AAIE,MAJI,CAIJ,UAAU,CAAC;EACT,SAAS,EAAE,MAAM;CAClB;;AAGH,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EACjC,AAAA,MAAM,CAAC;IACL,SAAS,EAAE,MAAM;GAClB",
+    "sources": [
+        "lives.scss"
+    ],
+    "names": [],
+    "file": "lives.css"
+}

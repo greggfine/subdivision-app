@@ -1,0 +1,114 @@
+.Game-over {
+  text-align: center;
+  font-size: 3.5rem;
+  padding-top: 120px !important;
+}
+
+.Game-over .youtube-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 450px;
+  text-decoration: none;
+  position: relative;
+  top: 70px;
+  left: -155px;
+}
+
+.Game-over .youtube-wrapper:hover {
+  -webkit-transform: scale(1.015);
+          transform: scale(1.015);
+}
+
+.Game-over .youtube-wrapper .channel-title-icon-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  bottom: 40px;
+}
+
+.Game-over .youtube-wrapper i {
+  font-size: 3rem;
+  color: #ff0000;
+  padding: 20px;
+  position: relative;
+  top: 50px;
+  right: 90px;
+}
+
+.Game-over .youtube-wrapper p {
+  color: #fff;
+  font-weight: 800;
+  border: 5px solid #fff;
+  background-color: #2a62f6;
+  letter-spacing: 2px;
+  height: 55px;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+}
+
+.Game-over .youtube-wrapper p span {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.Game-over .youtube-wrapper .profile-pic {
+  width: 150px;
+  height: 150px;
+  -webkit-clip-path: circle(37%);
+          clip-path: circle(37%);
+  position: relative;
+  top: 30px;
+  left: 150px;
+}
+
+.Game-over .final-score-header {
+  font-size: 4.3rem !important;
+}
+
+.Game-over .Game-over-header {
+  margin-bottom: 120px !important;
+  color: rgba(47, 47, 47, 0.9);
+}
+
+.Game-over .Game-over-info-wrapper {
+  background-color: #fff;
+  padding: 60px;
+  -webkit-box-shadow: -1px 1px 19px 9px #e8e6ea;
+          box-shadow: -1px 1px 19px 9px #e8e6ea;
+}
+
+.Game-over .header {
+  margin-bottom: 60px;
+}
+
+.Game-over .score {
+  padding-left: 20px;
+}
+
+.Game-over .Score-icon {
+  color: lightgrey;
+}
+
+.Game-over .youtube-icon {
+  color: red;
+}
+
+@media screen and (max-width: 700px) {
+  .Game-over {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 120px !important;
+  }
+  .Game-over .final-score-header {
+    font-size: 3.5rem !important;
+  }
+  .Game-over .score {
+    padding-left: 0px;
+  }
+}
+/*# sourceMappingURL=gameOverDisplay.css.map */

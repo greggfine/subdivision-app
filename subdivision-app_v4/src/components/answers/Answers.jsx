@@ -44,6 +44,7 @@ const Answers = ({
         />
       </button>,
       <button
+        disabled={true}
         className="notation"
         key={uuid()}
         onClick={() => {

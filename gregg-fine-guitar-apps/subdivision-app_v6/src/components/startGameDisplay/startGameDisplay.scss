@@ -1,0 +1,30 @@
+.Start-game {
+  text-align: center;
+  font-size: 3rem;
+
+  .header {
+    padding-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .Start-game-btn {
+    margin-bottom: 60px;
+  }
+
+  .video {
+    width: 800px;
+    margin: 60px auto 0px auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Start-game {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Start-game {
+    font-size: 1.5rem;
+  }
+}

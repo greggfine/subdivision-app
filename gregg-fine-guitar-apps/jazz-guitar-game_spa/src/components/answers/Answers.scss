@@ -1,0 +1,41 @@
+.Answers {
+  .answer-btns {
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    margin-right: 60px !important;
+    width: 400px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.notation {
+  //   animation-name: fadeIn;
+  //   animation-duration: 3s;
+  border-radius: 10px !important;
+  //   padding: 10px 20px !important;
+  background-color: #fff !important;
+  //   font-size: 4rem !important;
+
+  &:hover {
+    background-color: rgb(226, 223, 241) !important;
+  }
+
+  .abc {
+    font-size: 4rem !important;
+    // text {
+    // }
+  }
+}
+
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }

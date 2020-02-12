@@ -1,0 +1,104 @@
+.Game-over {
+  text-align: center;
+  font-size: 3.5rem;
+  padding-top: 120px !important;
+
+  .youtube-wrapper {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    text-decoration: none;
+    position: relative;
+    top: 70px;
+    left: -155px;
+    &:hover {
+      transform: scale(1.015);
+    }
+
+    .channel-title-icon-wrapper {
+      display: flex;
+      position: relative;
+      bottom: 40px;
+    }
+
+    i {
+      font-size: 3rem;
+      color: #ff0000;
+      padding: 20px;
+      position: relative;
+      top: 50px;
+      right: 90px;
+    }
+
+    p {
+      color: #fff;
+      font-weight: 800;
+      border: 5px solid #fff;
+      background-color: #2a62f6;
+      letter-spacing: 2px;
+      height: 55px;
+      padding: 5px 10px;
+      font-size: 1.5rem;
+      span {
+        font-weight: 100;
+        font-size: 1rem;
+      }
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      clip-path: circle(37%);
+      position: relative;
+      top: 30px;
+      left: 150px;
+    }
+  }
+  .final-score-header {
+    font-size: 4.3rem !important;
+  }
+
+  .Game-over-header {
+    margin-bottom: 120px !important;
+    color: rgba(47, 47, 47, 0.9);
+  }
+
+  .Game-over-info-wrapper {
+    background-color: #fff;
+    padding: 60px;
+    box-shadow: -1px 1px 19px 9px #e8e6ea;
+  }
+
+  .header {
+    margin-bottom: 60px;
+  }
+
+  .score {
+    padding-left: 20px;
+    // color: #6335c9;
+  }
+
+  .Score-icon {
+    // color: #cf2cc7;
+    color: lightgrey;
+  }
+
+  .youtube-icon {
+    color: red;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Game-over {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 120px !important;
+
+    .final-score-header {
+      font-size: 3.5rem !important;
+    }
+    .score {
+      padding-left: 0px;
+    }
+  }
+}
