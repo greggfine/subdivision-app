@@ -1,0 +1,92 @@
+.Answers {
+  margin-bottom: 60px;
+
+  .answer-btns {
+    display: flex;
+    justify-content: space-between !important;
+  }
+
+  .answer-btns > button {
+    border: 3px solid #45334c91;
+    border-radius: 10px !important;
+    outline: none !important;
+    flex-basis: 40%;
+    animation-name: fadeIn;
+    animation-duration: 750ms;
+    animation-timing-function: ease-in-out;
+
+    &:hover {
+      cursor: pointer !important;
+      background-color: rgb(226, 223, 241) !important;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .btn-notation-clicked {
+    pointer-events: none !important;
+    &:hover {
+      cursor: not-allowed;
+      background-color: none !important;
+    }
+  }
+
+  .Game-over-header {
+    margin-bottom: 120px !important;
+    font-size: 6.5rem !important;
+    color: rgba(47, 47, 47, 0.9);
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-timing-function: cubic-bezier(0.63, -0.03, 0.21, 1.16);
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes spin {
+    0% {
+      opacity: 0.3;
+      transform: rotateY(0deg) scale(0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: rotateY(360deg) scale(1);
+    }
+  }
+
+  .level-mode {
+    text-align: left;
+    margin-bottom: 100px;
+    opacity: 0.85;
+    font-weight: 200;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Answers {
+    .answer-btns {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    button:first-child {
+      margin-bottom: 60px;
+    }
+
+    .Game-over-header {
+      margin-bottom: 120px !important;
+      font-size: 4.5rem !important;
+    }
+    .level-mode {
+      font-size: 1.6rem;
+      margin-bottom: 60px;
+      padding-left: 45px;
+    }
+  }
+}

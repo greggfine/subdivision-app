@@ -1,0 +1,15 @@
+.Mute-btn {
+  font-size: 0.8rem !important;
+}
+
+.Mute-btn .icon {
+  width: 100%;
+  margin: 0 auto !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .Mute-btn {
+    margin-right: 80px !important;
+  }
+}
+/*# sourceMappingURL=muteBtn.css.map */

@@ -1,0 +1,20 @@
+.txt-label-wrapper {
+  border-radius: 20px !important;
+  box-shadow: 1px 6px 5px -4px rgb(177, 177, 177) !important;
+  .hear-again-txt {
+    padding-right: 20px !important;
+    font-size: 1.5rem;
+    font-weight: 200;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .txt-label-wrapper {
+    margin-bottom: 60px !important;
+    .hear-again-txt {
+      padding-right: 15px !important;
+      font-size: 1.2rem;
+    }
+  }
+}

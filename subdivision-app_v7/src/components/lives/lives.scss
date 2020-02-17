@@ -1,0 +1,14 @@
+.Lives {
+  color: #fffcc9;
+  font-size: 2.9rem;
+
+  .lives-txt {
+    font-size: 1.9rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Lives {
+    font-size: 2.4rem;
+  }
+}
