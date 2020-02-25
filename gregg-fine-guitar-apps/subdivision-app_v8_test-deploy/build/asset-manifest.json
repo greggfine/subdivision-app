@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/subdivision-app/static/css/main.80f40584.chunk.css",
-    "main.js": "/subdivision-app/static/js/main.bdc7ef21.chunk.js",
-    "main.js.map": "/subdivision-app/static/js/main.bdc7ef21.chunk.js.map",
+    "main.css": "/subdivision-app/static/css/main.2f5deca4.chunk.css",
+    "main.js": "/subdivision-app/static/js/main.a09c3644.chunk.js",
+    "main.js.map": "/subdivision-app/static/js/main.a09c3644.chunk.js.map",
     "runtime-main.js": "/subdivision-app/static/js/runtime-main.dffcda59.js",
     "runtime-main.js.map": "/subdivision-app/static/js/runtime-main.dffcda59.js.map",
     "static/css/2.61f7f2c0.chunk.css": "/subdivision-app/static/css/2.61f7f2c0.chunk.css",
-    "static/js/2.3d0dbbc0.chunk.js": "/subdivision-app/static/js/2.3d0dbbc0.chunk.js",
-    "static/js/2.3d0dbbc0.chunk.js.map": "/subdivision-app/static/js/2.3d0dbbc0.chunk.js.map",
+    "static/js/2.6def3fa9.chunk.js": "/subdivision-app/static/js/2.6def3fa9.chunk.js",
+    "static/js/2.6def3fa9.chunk.js.map": "/subdivision-app/static/js/2.6def3fa9.chunk.js.map",
     "index.html": "/subdivision-app/index.html",
-    "precache-manifest.dd34497546941285d8e2ccc5c29b2023.js": "/subdivision-app/precache-manifest.dd34497546941285d8e2ccc5c29b2023.js",
+    "precache-manifest.c55397fa2dbd95cde810f9926786a413.js": "/subdivision-app/precache-manifest.c55397fa2dbd95cde810f9926786a413.js",
     "service-worker.js": "/subdivision-app/service-worker.js",
     "static/css/2.61f7f2c0.chunk.css.map": "/subdivision-app/static/css/2.61f7f2c0.chunk.css.map",
-    "static/css/main.80f40584.chunk.css.map": "/subdivision-app/static/css/main.80f40584.chunk.css.map",
-    "static/js/2.3d0dbbc0.chunk.js.LICENSE": "/subdivision-app/static/js/2.3d0dbbc0.chunk.js.LICENSE",
+    "static/css/main.2f5deca4.chunk.css.map": "/subdivision-app/static/css/main.2f5deca4.chunk.css.map",
+    "static/js/2.6def3fa9.chunk.js.LICENSE": "/subdivision-app/static/js/2.6def3fa9.chunk.js.LICENSE",
     "static/media/style.css": "/subdivision-app/static/media/step-backward.e3f28009.svg",
     "static/media/failure.mp3": "/subdivision-app/static/media/failure.e67b7681.mp3",
     "static/media/game_over.mp3": "/subdivision-app/static/media/game_over.f8f082f3.mp3",
@@ -22,13 +22,14 @@
     "static/media/loop7.mp3": "/subdivision-app/static/media/loop7.d7524f83.mp3",
     "static/media/notation1.jpg": "/subdivision-app/static/media/notation1.2c3a8ee4.jpg",
     "static/media/notation2.jpg": "/subdivision-app/static/media/notation2.8ec894b1.jpg",
+    "static/media/silhouette-photo-of-man-singing-on-stage-1916824.jpg": "/subdivision-app/static/media/silhouette-photo-of-man-singing-on-stage-1916824.9886c912.jpg",
     "static/media/success.mp3": "/subdivision-app/static/media/success.1d958c3a.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.dffcda59.js",
     "static/css/2.61f7f2c0.chunk.css",
-    "static/js/2.3d0dbbc0.chunk.js",
-    "static/css/main.80f40584.chunk.css",
-    "static/js/main.bdc7ef21.chunk.js"
+    "static/js/2.6def3fa9.chunk.js",
+    "static/css/main.2f5deca4.chunk.css",
+    "static/js/main.a09c3644.chunk.js"
   ]
 }
