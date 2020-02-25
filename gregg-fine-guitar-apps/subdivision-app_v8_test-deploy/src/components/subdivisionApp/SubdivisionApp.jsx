@@ -18,7 +18,7 @@ function SubdivisionApp({ gameOver, startGame }) {
   const [muted, toggleMuted] = useToggle();
   return gameOver ? (
     <GameOverDisplay />
-  ) : startGame === true ? (
+  ) : startGame === false ? (
     <StartGameDisplay />
   ) : (
     <div>

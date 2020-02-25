@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { startGame } from "../../action-creators/startGame";
 import Levels from "../levels/Levels";
 
-// import img from "../../images/pexels/silhouette-photo-of-man-singing-on-stage-1916824.jpg";
+import img from "../../images/pexels/silhouette-photo-of-man-singing-on-stage-1916824.jpg";
 
 import { Container, Header, Button, Embed } from "semantic-ui-react";
 import "./startGameDisplay.scss";
@@ -27,7 +27,7 @@ export const StartGameDisplay = ({ startGame }) => (
     <Embed
       className="video"
       id="InMKcezbtA0"
-      //   placeholder={img}
+      placeholder={img}
       source="youtube"
       autoPlay={true}
     />
