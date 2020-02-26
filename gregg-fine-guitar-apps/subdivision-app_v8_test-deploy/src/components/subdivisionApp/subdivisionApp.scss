@@ -23,12 +23,13 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   .gtr-image {
-    background-position: 150px 60px;
-    margin: 0 auto;
-    height: 400px;
+    // background-position: 150px 60px;
+    // margin: 0 auto;
+    // height: 400px;
     // background-color: rgba(238, 234, 211, 0.28);
-    background-size: 200px;
+    // background-size: 200px;
+    display: none;
   }
 }

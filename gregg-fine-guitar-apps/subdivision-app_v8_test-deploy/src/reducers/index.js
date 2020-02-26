@@ -11,7 +11,7 @@ import { playStateReducer } from "./playStateReducer";
 import { mutedReducer } from "./mutedReducer";
 
 export const rootReducer = combineReducers({
-  questions: questionReducer,
+  //   questions: questionReducer,
   lives: livesReducer,
   score: scoreReducer,
   chances: chancesReducer,

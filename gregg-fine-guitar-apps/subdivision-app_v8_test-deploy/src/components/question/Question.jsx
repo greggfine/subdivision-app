@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { getRandQuestion } from "../../action-creators/getRandQuestionAction";
+// import { getRandQuestion } from "../../action-creators/getRandQuestionAction";
 import { setPlayState } from "../../action-creators/setPlayState";
 import HearAgain from "../hearAgain/HearAgain";
 import "./question.scss";
 import Audio from "../audio/Audio";
+
+import loop3 from "../../audio/loops/loop3.mp3";
+import loop7 from "../../audio/loops/loop7.mp3";
 
 const Question = ({ chances, lives, level, muted, playNext, setPlayState }) => {
   const [hearAgainBtnDisabled, toggleHearAgainBtnDisabled] = useState(false);
@@ -26,7 +29,9 @@ const Question = ({ chances, lives, level, muted, playNext, setPlayState }) => {
   const hearLoopAgain = () => {
     setHearAgainNumRepeats((hearAgainNumRepeats += 1));
     toggleHearAgainBtnDisabled(!hearAgainBtnDisabled);
-    audioRef.current.src = `${level.loop}#t=00:00:${playNext.startStopTimes.start},00:00:${playNext.startStopTimes.stop}`;
+    level.mode === "Easy"
+      ? (audioRef.current.src = `${loop3}#t=00:00:${playNext.startStopTimes.start},00:00:${playNext.startStopTimes.stop}`)
+      : (audioRef.current.src = `${loop7}#t=00:00:${playNext.startStopTimes.start},00:00:${playNext.startStopTimes.stop}`);
     audioRef.current.play();
   };
 
@@ -66,9 +71,8 @@ const mapStateToProps = ({ chances, level, lives, muted, playNext }) => ({
   playNext
 });
 
-export default connect(mapStateToProps, { getRandQuestion, setPlayState })(
-  Question
-);
+// export default connect(mapStateToProps, { getRandQuestion, setPlayState })(
+export default connect(mapStateToProps, { setPlayState })(Question);
 
 Question.propTypes = {
   playNext: PropTypes.object.isRequired,

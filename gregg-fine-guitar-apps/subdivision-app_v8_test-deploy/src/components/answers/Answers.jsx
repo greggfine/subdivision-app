@@ -10,10 +10,10 @@ import { shuffle } from "lodash";
 import uuid from "uuid";
 import { Header } from "semantic-ui-react";
 
-import {
-  notationStylesMobile,
-  notationStylesDesktop
-} from "../../util/notationStyles";
+// import {
+//   notationStylesMobile,
+//   notationStylesDesktop
+// } from "../../util/notationStyles";
 import {
   handleCorrectAnswer,
   handleWrongAnswer
@@ -66,9 +66,9 @@ const Answers = ({
             className="abc"
             notation={playNext.startStopTimes.notation}
             parserParams={{}}
-            engraverParams={
-              isMobileView ? notationStylesMobile : notationStylesDesktop
-            }
+            // engraverParams={
+            //   isMobileView ? notationStylesMobile : notationStylesDesktop
+            // }
           />
         </button>,
         <button
@@ -86,14 +86,15 @@ const Answers = ({
             className="abc"
             notation={playNext.wrongNotation.notation}
             parserParams={{}}
-            engraverParams={
-              isMobileView ? notationStylesMobile : notationStylesDesktop
-            }
+            // engraverParams={
+            //   isMobileView ? notationStylesMobile : notationStylesDesktop
+            // }
           />
         </button>
       ])
     );
-  }, [isMobileView, playNext]);
+  }, [playNext]);
+  //   }, [isMobileView, playNext]);
 
   useEffect(() => {
     setNotationStylesBasedOnScreenSize();

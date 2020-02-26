@@ -23,3 +23,11 @@ export const questionReducer = (
       return state;
   }
 };
+
+/* 
+reducers should not mutate state
+reducers should be pure, should always return the same output, given the same input
+
+In this reducer, we call a function that returns an object where the function
+has a "shuffle" function that randomly shuffles the array
+*/

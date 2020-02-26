@@ -1,4 +1,4 @@
-const key = "C";
+const key = "C style=rhythm";
 const baseNoteLength = "1/8";
 const meter = "4/4";
 
