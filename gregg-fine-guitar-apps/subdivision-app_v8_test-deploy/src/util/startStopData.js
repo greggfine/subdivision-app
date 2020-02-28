@@ -14,7 +14,7 @@ export default [
     notation: `X:1\nM:${meter}\nL:${baseNoteLength}\nK:${key}\nc2cc cccc|`
   },
   {
-    start: "8.00",
+    start: "08.00",
     stop: "11.90",
     notation: `X:1\nM:${meter}\nL:${baseNoteLength}\nK:${key}\ncczc cccc|`
   },

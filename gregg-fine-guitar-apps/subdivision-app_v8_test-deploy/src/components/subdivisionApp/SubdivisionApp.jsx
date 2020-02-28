@@ -14,7 +14,7 @@ import "./subdivisionApp.scss";
 
 import "../../App.css";
 
-function SubdivisionApp({ gameOver, startGame }) {
+function SubdivisionApp({ gameOver, lives, chances, startGame }) {
   const [muted, toggleMuted] = useToggle();
   return gameOver ? (
     <GameOverDisplay />
@@ -26,16 +26,24 @@ function SubdivisionApp({ gameOver, startGame }) {
       <div className="app-wrapper">
         <Answers />
         <Question />
-        <TipMuteBtnWrapper>
-          <Tip />
-          {/* <MuteBtn muted={muted} toggleMuted={toggleMuted} /> */}
-        </TipMuteBtnWrapper>
+        {lives > 0 && chances < 10 ? (
+          <TipMuteBtnWrapper>
+            <Tip />
+            {/* <MuteBtn muted={muted} toggleMuted={toggleMuted} /> */}
+          </TipMuteBtnWrapper>
+        ) : null}
+
         <div className="gtr-image"></div>
       </div>
     </div>
   );
 }
 
-const mapStateToProps = ({ gameOver, startGame }) => ({ gameOver, startGame });
+const mapStateToProps = ({ gameOver, lives, chances, startGame }) => ({
+  gameOver,
+  lives,
+  chances,
+  startGame
+});
 
 export default connect(mapStateToProps)(SubdivisionApp);

@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/subdivision-app/static/css/main.2f5deca4.chunk.css",
-    "main.js": "/subdivision-app/static/js/main.dd97ecd1.chunk.js",
-    "main.js.map": "/subdivision-app/static/js/main.dd97ecd1.chunk.js.map",
+    "main.css": "/subdivision-app/static/css/main.51df7c6c.chunk.css",
+    "main.js": "/subdivision-app/static/js/main.eaffa63e.chunk.js",
+    "main.js.map": "/subdivision-app/static/js/main.eaffa63e.chunk.js.map",
     "runtime-main.js": "/subdivision-app/static/js/runtime-main.dffcda59.js",
     "runtime-main.js.map": "/subdivision-app/static/js/runtime-main.dffcda59.js.map",
     "static/css/2.61f7f2c0.chunk.css": "/subdivision-app/static/css/2.61f7f2c0.chunk.css",
-    "static/js/2.6def3fa9.chunk.js": "/subdivision-app/static/js/2.6def3fa9.chunk.js",
-    "static/js/2.6def3fa9.chunk.js.map": "/subdivision-app/static/js/2.6def3fa9.chunk.js.map",
+    "static/js/2.2e833c9a.chunk.js": "/subdivision-app/static/js/2.2e833c9a.chunk.js",
+    "static/js/2.2e833c9a.chunk.js.map": "/subdivision-app/static/js/2.2e833c9a.chunk.js.map",
     "index.html": "/subdivision-app/index.html",
-    "precache-manifest.f53621fd3152a65d1bc0cbaadb2ac73e.js": "/subdivision-app/precache-manifest.f53621fd3152a65d1bc0cbaadb2ac73e.js",
+    "precache-manifest.3560d31177f47b7b91702b411262cf63.js": "/subdivision-app/precache-manifest.3560d31177f47b7b91702b411262cf63.js",
     "service-worker.js": "/subdivision-app/service-worker.js",
     "static/css/2.61f7f2c0.chunk.css.map": "/subdivision-app/static/css/2.61f7f2c0.chunk.css.map",
-    "static/css/main.2f5deca4.chunk.css.map": "/subdivision-app/static/css/main.2f5deca4.chunk.css.map",
-    "static/js/2.6def3fa9.chunk.js.LICENSE": "/subdivision-app/static/js/2.6def3fa9.chunk.js.LICENSE",
+    "static/css/main.51df7c6c.chunk.css.map": "/subdivision-app/static/css/main.51df7c6c.chunk.css.map",
+    "static/js/2.2e833c9a.chunk.js.LICENSE": "/subdivision-app/static/js/2.2e833c9a.chunk.js.LICENSE",
     "static/media/style.css": "/subdivision-app/static/media/step-backward.e3f28009.svg",
     "static/media/failure.mp3": "/subdivision-app/static/media/failure.e67b7681.mp3",
     "static/media/game_over.mp3": "/subdivision-app/static/media/game_over.f8f082f3.mp3",
@@ -28,8 +28,8 @@
   "entrypoints": [
     "static/js/runtime-main.dffcda59.js",
     "static/css/2.61f7f2c0.chunk.css",
-    "static/js/2.6def3fa9.chunk.js",
-    "static/css/main.2f5deca4.chunk.css",
-    "static/js/main.dd97ecd1.chunk.js"
+    "static/js/2.2e833c9a.chunk.js",
+    "static/css/main.51df7c6c.chunk.css",
+    "static/js/main.eaffa63e.chunk.js"
   ]
 }

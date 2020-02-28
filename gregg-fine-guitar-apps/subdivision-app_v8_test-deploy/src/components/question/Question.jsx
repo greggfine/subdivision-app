@@ -10,7 +10,15 @@ import Audio from "../audio/Audio";
 import loop3 from "../../audio/loops/loop3.mp3";
 import loop7 from "../../audio/loops/loop7.mp3";
 
-const Question = ({ chances, lives, level, muted, playNext, setPlayState }) => {
+const Question = ({
+  chances,
+  isPlaying,
+  lives,
+  level,
+  muted,
+  playNext,
+  setPlayState
+}) => {
   const [hearAgainBtnDisabled, toggleHearAgainBtnDisabled] = useState(false);
   let [hearAgainNumRepeats, setHearAgainNumRepeats] = useState(0);
 
@@ -43,12 +51,17 @@ const Question = ({ chances, lives, level, muted, playNext, setPlayState }) => {
 
   return (
     <>
-      <HearAgain
-        numRepeats={hearAgainNumRepeats}
-        disabled={hearAgainBtnDisabled || lives === 0 || chances === 10}
-        hearLoopAgain={hearLoopAgain}
-        lives={lives}
-      />
+      {lives > 0 && chances < 10 ? (
+        <HearAgain
+          numRepeats={hearAgainNumRepeats}
+          disabled={
+            isPlaying || hearAgainBtnDisabled || lives === 0 || chances === 10
+          }
+          hearLoopAgain={hearLoopAgain}
+          lives={lives}
+        />
+      ) : null}
+
       <div className="Question">
         <Audio
           level={level}
@@ -63,8 +76,16 @@ const Question = ({ chances, lives, level, muted, playNext, setPlayState }) => {
   );
 };
 
-const mapStateToProps = ({ chances, level, lives, muted, playNext }) => ({
+const mapStateToProps = ({
   chances,
+  isPlaying,
+  level,
+  lives,
+  muted,
+  playNext
+}) => ({
+  chances,
+  isPlaying,
   level,
   lives,
   muted,

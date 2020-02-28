@@ -9,6 +9,11 @@ import { connect } from "react-redux";
 import { shuffle } from "lodash";
 import uuid from "uuid";
 import { Header } from "semantic-ui-react";
+
+// import {
+//   notationStylesMobile,
+//   notationStylesDesktop
+// } from "../../util/notationStyles";
 import {
   handleCorrectAnswer,
   handleWrongAnswer
@@ -16,14 +21,11 @@ import {
 import { handlePlayNext } from "../../action-creators/handlePlayNext";
 import Abcjs from "react-abc";
 import { setPlayState } from "../../action-creators/setPlayState";
+
 import success from "../../audio/sfx/success.mp3";
 import failure from "../../audio/sfx/failure.mp3";
-import "./Answers.scss";
 
-import startStopTimes from "../../util/startStopData";
-const shuffledStartStopTimes = shuffle(startStopTimes);
-let count = 0;
-let randCount;
+import "./Answers.scss";
 
 const Answers = ({
   chances,
@@ -37,27 +39,15 @@ const Answers = ({
   playNext,
   setPlayState
 }) => {
+  const [isMobileView, setToMobileView] = useState(false);
   const [shuffled, setShuffled] = useState([]);
   const audioSuccessRef = useRef();
   const audioFailureRef = useRef();
 
-  const generateCounts = () => {
-    //   increment count variable
-    count++;
-    // generate a random count variable
-    if (count > shuffledStartStopTimes.length) {
-      console.log("count greater than!");
-    }
-    randCount = Math.floor(Math.random() * shuffledStartStopTimes.length);
-    //
-    while (randCount === count) {
-      randCount++;
-      if (count > shuffledStartStopTimes.length) {
-        console.log("randCount greater than!");
-      }
-    }
+  const setNotationStylesBasedOnScreenSize = () => {
+    // window.innerWidth < 950 ? setToMobileView(true) : setToMobileView(false);
+    window.innerWidth < 550 ? setToMobileView(true) : setToMobileView(false);
   };
-
   useEffect(() => {
     setShuffled(
       shuffle([
@@ -68,11 +58,7 @@ const Answers = ({
             handleCorrectAnswer();
             audioSuccessRef.current.play();
             setTimeout(() => {
-              generateCounts();
-              handlePlayNext({
-                startStopTimes: shuffledStartStopTimes[count],
-                wrongNotation: shuffledStartStopTimes[randCount]
-              });
+              handlePlayNext();
             }, 1000);
           }}
         >
@@ -85,11 +71,7 @@ const Answers = ({
             handleWrongAnswer();
             audioFailureRef.current.play();
             setTimeout(() => {
-              generateCounts();
-              handlePlayNext({
-                startStopTimes: shuffledStartStopTimes[count],
-                wrongNotation: shuffledStartStopTimes[randCount]
-              });
+              handlePlayNext();
             }, 1000);
           }}
         >
@@ -98,6 +80,20 @@ const Answers = ({
       ])
     );
   }, [playNext]);
+  //   }, [isMobileView, playNext]);
+
+  useEffect(() => {
+    setNotationStylesBasedOnScreenSize();
+    window.addEventListener("resize", () =>
+      setNotationStylesBasedOnScreenSize()
+    );
+    return () => {
+      window.removeEventListener(
+        "resize",
+        setNotationStylesBasedOnScreenSize()
+      );
+    };
+  }, []);
 
   const shuffledBtns = shuffled.map(btn => {
     return btn;
@@ -105,6 +101,7 @@ const Answers = ({
 
   return (
     <div className="Answers">
+      <h2 className="level-mode">{level.mode} mode</h2>
       <audio
         src={success}
         id="success"
@@ -119,18 +116,15 @@ const Answers = ({
       ></audio>
 
       {lives > 0 && chances < 10 ? (
-        <>
-          <h2 className="level-mode">{level.mode} mode</h2>
-          <div
-            className={
-              isPlaying
-                ? "answer-btns btn btn-notation-clicked"
-                : "answer-btns btn btn-notation"
-            }
-          >
-            {shuffledBtns}
-          </div>
-        </>
+        <div
+          className={
+            isPlaying
+              ? "answer-btns btn btn-notation-clicked"
+              : "answer-btns btn btn-notation"
+          }
+        >
+          {shuffledBtns}
+        </div>
       ) : (
         <Header size="huge" className="Game-over-header">
           Game Over

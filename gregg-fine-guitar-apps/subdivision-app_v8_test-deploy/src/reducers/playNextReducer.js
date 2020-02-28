@@ -3,26 +3,19 @@ import { shuffle } from "lodash";
 import startStopTimes from "../util/startStopData";
 
 const shuffledStartStopTimes = shuffle(startStopTimes);
+// console.log("init", shuffledStartStopTimes);
+const initState = {
+  startStopTimes: shuffledStartStopTimes[0],
+  wrongNotation: shuffledStartStopTimes[1]
+};
 
-let count = 0;
-let randCount;
-export const playNextReducer = (
-  state = {
-    startStopTimes: shuffledStartStopTimes[count],
-    wrongNotation: shuffledStartStopTimes[count + 1]
-  },
-  action
-) => {
+export const playNextReducer = (state = initState, action) => {
   switch (action.type) {
     case PLAY_NEXT:
-      count++;
-      randCount = Math.floor(Math.random() * shuffledStartStopTimes.length);
-      while (randCount === count) {
-        randCount++;
-      }
+      //   console.log(action.payload);
       return {
-        startStopTimes: shuffledStartStopTimes[count],
-        wrongNotation: shuffledStartStopTimes[randCount]
+        startStopTimes: action.payload.startStopTimes,
+        wrongNotation: action.payload.wrongNotation
       };
     default:
       return state;

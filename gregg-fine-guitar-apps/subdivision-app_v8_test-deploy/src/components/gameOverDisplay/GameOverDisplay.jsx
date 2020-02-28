@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { setPlayAgain } from "../../action-creators/setPlayAgain";
+import Levels from "../levels/Levels";
 
 import { Container, Header, Button, Icon } from "semantic-ui-react";
 import "./gameOverDisplay.scss";
@@ -18,9 +19,16 @@ const GameOverDisplay = ({ score, setPlayAgain }) => (
       <Header color="violet" className="final-score-header">
         Final Score: <span className="score">{score}</span>
       </Header>
-      <Button onClick={setPlayAgain} inverted color="purple" size="huge">
+      <Button
+        onClick={setPlayAgain}
+        inverted
+        color="purple"
+        size="huge"
+        className="play-again-btn"
+      >
         Play Again?
       </Button>
+      <Levels />
     </div>
 
     <a

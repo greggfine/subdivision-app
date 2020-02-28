@@ -1,7 +1,8 @@
 import { PLAY_NEXT } from "../actions";
 
-export const handlePlayNext = () => {
+export const handlePlayNext = startStopTimes => {
   return {
-    type: PLAY_NEXT
+    type: PLAY_NEXT,
+    payload: startStopTimes
   };
 };
