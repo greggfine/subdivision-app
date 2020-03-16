@@ -8,7 +8,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Route exact path="/" component={LandingPage}></Route>
+        {/* <Route exact path="/" component={LandingPage}></Route> */}
+        <Route exact path="/" component={SubdivisionApp}></Route>
         <Switch>
           <Route exact path="/subdivision-app" component={SubdivisionApp} />
           {/* <Route exact path="/jazz-guitar-app" component={SubdivisionApp} /> */}
