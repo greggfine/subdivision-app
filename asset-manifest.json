@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/subdivision-app/static/css/main.6694fbdb.chunk.css",
-    "main.js": "/subdivision-app/static/js/main.d2fa8d57.chunk.js",
-    "main.js.map": "/subdivision-app/static/js/main.d2fa8d57.chunk.js.map",
+    "main.js": "/subdivision-app/static/js/main.ae29c984.chunk.js",
+    "main.js.map": "/subdivision-app/static/js/main.ae29c984.chunk.js.map",
     "runtime-main.js": "/subdivision-app/static/js/runtime-main.dffcda59.js",
     "runtime-main.js.map": "/subdivision-app/static/js/runtime-main.dffcda59.js.map",
     "static/css/2.61f7f2c0.chunk.css": "/subdivision-app/static/css/2.61f7f2c0.chunk.css",
     "static/js/2.73133dc4.chunk.js": "/subdivision-app/static/js/2.73133dc4.chunk.js",
     "static/js/2.73133dc4.chunk.js.map": "/subdivision-app/static/js/2.73133dc4.chunk.js.map",
     "index.html": "/subdivision-app/index.html",
-    "precache-manifest.772e7d6f5d88dbdffdbb9d4312813659.js": "/subdivision-app/precache-manifest.772e7d6f5d88dbdffdbb9d4312813659.js",
+    "precache-manifest.21aeff94626778df8ce77640b389f96c.js": "/subdivision-app/precache-manifest.21aeff94626778df8ce77640b389f96c.js",
     "service-worker.js": "/subdivision-app/service-worker.js",
     "static/css/2.61f7f2c0.chunk.css.map": "/subdivision-app/static/css/2.61f7f2c0.chunk.css.map",
     "static/css/main.6694fbdb.chunk.css.map": "/subdivision-app/static/css/main.6694fbdb.chunk.css.map",
     "static/js/2.73133dc4.chunk.js.LICENSE": "/subdivision-app/static/js/2.73133dc4.chunk.js.LICENSE",
     "static/media/style.css": "/subdivision-app/static/media/step-backward.e3f28009.svg",
-    "static/media/easy.mp3": "/subdivision-app/static/media/easy.85e862dd.mp3",
+    "static/media/easy.mp3": "/subdivision-app/static/media/easy.e6185086.mp3",
     "static/media/failure.mp3": "/subdivision-app/static/media/failure.e67b7681.mp3",
     "static/media/game_over.mp3": "/subdivision-app/static/media/game_over.f8f082f3.mp3",
     "static/media/subdivisionApp.scss": "/subdivision-app/static/media/guitar-4510136_1920_resized.86e97790.png",
-    "static/media/hard.mp3": "/subdivision-app/static/media/hard.5529df9a.mp3",
+    "static/media/hard.mp3": "/subdivision-app/static/media/hard.5ef42698.mp3",
     "static/media/loop3.mp3": "/subdivision-app/static/media/loop3.d186d2cb.mp3",
     "static/media/loop7.mp3": "/subdivision-app/static/media/loop7.d7524f83.mp3",
     "static/media/music-musician-musical-instrument-guitar-15919.jpg": "/subdivision-app/static/media/music-musician-musical-instrument-guitar-15919.556108ce.jpg",
@@ -33,6 +33,6 @@
     "static/css/2.61f7f2c0.chunk.css",
     "static/js/2.73133dc4.chunk.js",
     "static/css/main.6694fbdb.chunk.css",
-    "static/js/main.d2fa8d57.chunk.js"
+    "static/js/main.ae29c984.chunk.js"
   ]
 }
