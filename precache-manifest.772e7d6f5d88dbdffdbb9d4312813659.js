@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d68964dc99b3cbcd10ffd48be35c67a2",
+    "revision": "53cccb179994e18402346bae9fab0318",
     "url": "/subdivision-app/index.html"
   },
   {
-    "revision": "1a9ce65ba36c9dba6e72",
+    "revision": "5829fa14c17125397ac8",
     "url": "/subdivision-app/static/css/2.61f7f2c0.chunk.css"
   },
   {
-    "revision": "b409b5a302b03690d187",
-    "url": "/subdivision-app/static/css/main.4a7709b6.chunk.css"
+    "revision": "71221934e44d5464134e",
+    "url": "/subdivision-app/static/css/main.6694fbdb.chunk.css"
   },
   {
-    "revision": "1a9ce65ba36c9dba6e72",
-    "url": "/subdivision-app/static/js/2.ee3a8601.chunk.js"
+    "revision": "5829fa14c17125397ac8",
+    "url": "/subdivision-app/static/js/2.73133dc4.chunk.js"
   },
   {
     "revision": "0c4d2ae2ebe481529bf53445966b226a",
-    "url": "/subdivision-app/static/js/2.ee3a8601.chunk.js.LICENSE"
+    "url": "/subdivision-app/static/js/2.73133dc4.chunk.js.LICENSE"
   },
   {
-    "revision": "b409b5a302b03690d187",
-    "url": "/subdivision-app/static/js/main.50769d14.chunk.js"
+    "revision": "71221934e44d5464134e",
+    "url": "/subdivision-app/static/js/main.d2fa8d57.chunk.js"
   },
   {
     "revision": "22cb21b6709e04e2bab4",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0ec2583d8f978ea12c84962e10098c53",
     "url": "/subdivision-app/static/media/arrows-h.0ec2583d.svg"
+  },
+  {
+    "revision": "85e862ddcf76bab0b25b97bd93e8452d",
+    "url": "/subdivision-app/static/media/easy.85e862dd.mp3"
   },
   {
     "revision": "e67b76812312f686f0d551b8262cbe65",
@@ -44,12 +48,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/subdivision-app/static/media/guitar-4510136_1920_resized.86e97790.png"
   },
   {
+    "revision": "5529df9a7e897b587c528b4a89e5918a",
+    "url": "/subdivision-app/static/media/hard.5529df9a.mp3"
+  },
+  {
     "revision": "d186d2cb1d852819b4bf1a1d209c97b7",
     "url": "/subdivision-app/static/media/loop3.d186d2cb.mp3"
   },
   {
     "revision": "d7524f83d47f6cde1022ae78ff975a42",
     "url": "/subdivision-app/static/media/loop7.d7524f83.mp3"
+  },
+  {
+    "revision": "556108ce739c41f508adda37937e688b",
+    "url": "/subdivision-app/static/media/music-musician-musical-instrument-guitar-15919.556108ce.jpg"
   },
   {
     "revision": "2c3a8ee4f6d841ecc64e709496864805",
